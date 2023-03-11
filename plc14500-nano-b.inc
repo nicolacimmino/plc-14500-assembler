@@ -1,3 +1,4 @@
+.list   -
 ;
 ; cc65 file for PLC14500-Nano REV.B
 ;
@@ -131,7 +132,7 @@ TMR0TRIG = $F
 .macro nopf    ; 1111: NOPF = No change
     __instr I_NOPF, 0
 .endmacro
-
+.list   +
 
 
 

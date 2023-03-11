@@ -1,3 +1,4 @@
+.list   -
 ;
 ; cc65 file for PLC14500-Nano REV.C
 ;
@@ -7,3 +8,5 @@
 .include "../plc14500-nano-b.inc"
 
 RR = $7
+
+.list   +
