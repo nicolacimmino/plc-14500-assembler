@@ -12,6 +12,27 @@ The magic here is done mostly in `plc14500-nano-*.inc`. This file is heavily bas
 (original: https://github.com/veremenko-y/mc14500-programs/blob/main/sbc1/system.inc ).  I modified the IN/OUT/SPR 
 addresses to match the PLC14500 I/O layout and swapped the command/address nibbles as these are in opposite order.
 
+## Example
+
+An exceprt, out of context, from one of the examples you can find in this repo, showing how you can define labels and repeat blocks of code with an index.
+````asm
+.include "../plc14500-nano-b.inc"
+
+GAME_BIT0=SPR1  ; Game bit 0
+
+.segment "CODE"
+
+    IEN  IN6
+    OEN  IN6
+
+.repeat 5,I
+    LD   GAME_BIT0+I
+    STO  GAME_LED0+I
+.endrepeat
+
+````
+
+
 ## Assemble
 
 `build.cmd` contains all you need to assemble a `.asm` file. Just invoke it with:
