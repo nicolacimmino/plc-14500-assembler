@@ -1,3 +1,5 @@
+## About
+
 This is an alternative way of assembling programs for the PLC14500 trainer board 
 [https://github.com/nicolacimmino/PLC-14500]() that takes advantage  of the flexibility of the cc65 assembler
 ([https://cc65.github.io/]()).
@@ -9,6 +11,8 @@ The one shipped by the PLC14500 project is a simpler approach to get started as 
 The magic here is done mostly in `plc14500-nano-*.inc`. This file is heavily based on work by Yaroslav Veremenko
 (original: https://github.com/veremenko-y/mc14500-programs/blob/main/sbc1/system.inc ).  I modified the IN/OUT/SPR 
 addresses to match the PLC14500 I/O layout and swapped the command/address nibbles as these are in opposite order.
+
+## Assemble
 
 `build.cmd` contains all you need to assemble a `.asm` file. Just invoke it with:
 
