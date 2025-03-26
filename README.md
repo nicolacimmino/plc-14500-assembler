@@ -34,7 +34,7 @@ GAME_BIT0=SPR1  ; Game bit 0
 
 ## Assemble
 
-`build.cmd` contains all you need to assemble a `.asm` file. Just invoke it with:
+`build.cmd` (or `asm-14500-cc65.sh` if you're on linux) contains all you need to assemble a `.asm` file. Just invoke it with:
 
 `build.cmd test.asm`
 
